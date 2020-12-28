@@ -19,7 +19,12 @@ namespace hu.hunluxlauncher.libraries.auth.microsoft
 
         //public string Tenant { get; set; } = "common";
 
+        /// <summary>
+        /// Redirect Uri of your application (if you use your own ClientId, then you need to set it as <b>http://localhost</b>
+        /// </summary>
+        public string RedirectUri { get; set; } = "http://localhost";
         public Uri BrowserRedirectSuccess { get; set; }
         public Uri BrowserRedirectError { get; set; }
+        //public string RedirectUri { get; set; } = "https://login.live.com/oauth20_desktop.srf";
     }
 }
