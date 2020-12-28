@@ -17,7 +17,7 @@ Minecraft authentication library for the *new* Microsoft Authentication method. 
 - :ballot_box_with_check: Fully reworked and made much simpler to work with
 
 ## How does it work?
-> Check out the [sample WPF project](https://github.com/HunLuxLauncher/Libraries.Auth.Sample) to understand how does it work.
+> Check out the [sample WPF project](https://github.com/HunLuxLauncher/Libraries.Auth.Microsoft.Sample) to understand how does it work.
 
 ### Used sources:
 - [wiki.vg](https://wiki.vg/Microsoft_Authentication_Scheme) 
