@@ -6,7 +6,7 @@ namespace hu.hunluxlauncher.libraries.auth.microsoft
     {
         public static JsonSerializerOptions JsonSerializerOptions
         {
-            get => new JsonSerializerOptions
+            get => new()
             {
                 AllowTrailingCommas = true,
 #if NET5_0
