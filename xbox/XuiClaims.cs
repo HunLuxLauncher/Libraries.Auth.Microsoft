@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.Json.Serialization;
 
-namespace hu.hunluxlauncher.libraries.auth.microsoft.xbox
+namespace Libraries.Auth.Microsoft.Xbox
 {
     public class XuiClaims
     {

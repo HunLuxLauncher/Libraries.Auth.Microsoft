@@ -1,10 +1,9 @@
-using hu.hunluxlauncher.libraries.auth.microsoft;
 using Microsoft.Identity.Client;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace hu.hunluxlauncher.libraries.auth.microsoft
+namespace Libraries.Auth.Microsoft
 {
     public class MicrosoftAuthentication
     {
@@ -53,7 +52,10 @@ namespace hu.hunluxlauncher.libraries.auth.microsoft
                     var swvo = new SystemWebViewOptions();
                     if (AuthSettings.BrowserRedirectSuccess != null) swvo.BrowserRedirectSuccess = AuthSettings.BrowserRedirectSuccess;
                     if (AuthSettings.BrowserRedirectError != null) swvo.BrowserRedirectError = AuthSettings.BrowserRedirectError;
-                    authResult = await app.AcquireTokenInteractive(Scopes).WithAccount(accounts.FirstOrDefault()).WithPrompt(Prompt.SelectAccount).WithSystemWebViewOptions(swvo).ExecuteAsync();
+                    var ewvo = new EmbeddedWebViewOptions();
+                    ewvo.Title = "HunLux Launcher internal authenticator";
+                    //authResult = await app.AcquireTokenInteractive(Scopes).WithAccount(accounts.FirstOrDefault()).WithPrompt(Prompt.SelectAccount).WithSystemWebViewOptions(swvo).ExecuteAsync();
+                    authResult = await app.AcquireTokenInteractive(Scopes).WithAccount(accounts.FirstOrDefault()).WithPrompt(Prompt.SelectAccount).WithEmbeddedWebViewOptions(ewvo).ExecuteAsync();
                 }
                 catch (MsalException msalex)
                 {

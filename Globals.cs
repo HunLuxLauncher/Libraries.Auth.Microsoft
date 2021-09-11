@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-namespace hu.hunluxlauncher.libraries.auth.microsoft
+namespace Libraries.Auth.Microsoft
 {
     internal class Globals
     {
@@ -9,7 +9,8 @@ namespace hu.hunluxlauncher.libraries.auth.microsoft
             get => new()
             {
                 AllowTrailingCommas = true,
-#if NET5_0
+                PropertyNameCaseInsensitive = true,
+#if NET5_0_OR_GREATER
                 NumberHandling = System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString,
                 DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
 #endif

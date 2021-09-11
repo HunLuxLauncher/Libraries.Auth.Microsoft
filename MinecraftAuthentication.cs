@@ -1,13 +1,12 @@
-﻿using hu.czompisoftware.libraries.general;
-using hu.hunluxlauncher.libraries.auth.microsoft.minecraft;
+﻿using CzomPack.Logging;
+using Libraries.Auth.Microsoft.Minecraft;
+using Libraries.Auth.Microsoft.Utils;
 using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.IO;
 using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
 
-namespace hu.hunluxlauncher.libraries.auth.microsoft
+namespace Libraries.Auth.Microsoft
 {
     public class MinecraftAuthentication
     {
@@ -31,6 +30,12 @@ namespace hu.hunluxlauncher.libraries.auth.microsoft
             {
                 Logger.Error(ex.Message);
             }
+            //File.WriteAllText("authenticationDatas.json", JsonSerializer.Serialize(new
+            //{
+            //    XboxAuth = Convert.ToBase64String(JsonSerializer.SerializeToUtf8Bytes(XboxAuth, Globals.JsonSerializerOptions)),
+            //    Minecraft = Convert.ToBase64String(JsonSerializer.SerializeToUtf8Bytes(Minecraft.AccessToken, Globals.JsonSerializerOptions)),
+            //    GameOwnership = Convert.ToBase64String(JsonSerializer.SerializeToUtf8Bytes(GameOwnership, Globals.JsonSerializerOptions)),
+            //}, Globals.JsonSerializerOptions));
         }
 
         #region Authenticate with Minecraft
@@ -71,7 +76,7 @@ namespace hu.hunluxlauncher.libraries.auth.microsoft
         /// Get the profile info
         /// </summary>
         /// <param name="access_token">Use <see cref="Authenticate.AccessToken"/> from <see cref="MinecraftAuthenticate(string, string)"/>. Leave it <b>null</b> if you want to use the default account.</param>
-        /// <returns>With <see cref="ProfileInfo"/>.</returns>
+        /// <returns>With <see cref="ProfileInfo"/>.    </returns>
         public ProfileInfo GetProfile(string access_token=null)
         {
             access_token ??= Minecraft.AccessToken;

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace hu.hunluxlauncher.libraries.auth.microsoft
+namespace Libraries.Auth.Microsoft
 {
     public class AuthenticationSettings
     {

@@ -1,7 +1,6 @@
-﻿using hu.czompisoftware.libraries.crypto;
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 
-namespace hu.hunluxlauncher.libraries.auth.microsoft.minecraft
+namespace Libraries.Auth.Microsoft.Minecraft
 {
     public class OwnedItem
     {

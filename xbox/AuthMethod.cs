@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace hu.hunluxlauncher.libraries.auth.microsoft.xbox
+namespace Libraries.Auth.Microsoft.Xbox
 {
     public enum AuthMethod
     {

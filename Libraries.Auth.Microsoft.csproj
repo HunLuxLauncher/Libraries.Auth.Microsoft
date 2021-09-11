@@ -1,18 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>netcoreapp3.1;net5.0</TargetFrameworks>
-		<RootNamespace>hu.hunluxlauncher.libraries.auth.microsoft</RootNamespace>
-		<LangVersion>9.0</LangVersion>
+		<TargetFrameworks>netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
+		<LangVersion>10.0</LangVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="CzomPack" Version="2.3.1.8" />
-		<PackageReference Include="Microsoft.Identity.Client" Version="4.24.0" />
+		<PackageReference Include="CzomPack" Version="3.0.0" />
+		<PackageReference Include="Microsoft.Identity.Client" Version="4.36.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Libraries.Auth\Libraries.Auth.csproj" />
+	  <ProjectReference Include="..\Libraries.Auth\Libraries.Auth.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Converter\" />
 	</ItemGroup>
 
 </Project>
+ 

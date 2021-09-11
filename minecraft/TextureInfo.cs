@@ -1,20 +1,10 @@
 ﻿using System;
 using System.Text.Json.Serialization;
 
-namespace hu.hunluxlauncher.libraries.auth.microsoft.minecraft
+namespace Libraries.Auth.Microsoft.Minecraft
 {
     public class TextureInfo
     {
-        /*
-        {
-            "id" : "6a6e65e5-76dd-4c3c-a625-162924514568",
-            "state" : "ACTIVE",
-            "url" : "http://textures.minecraft.net/texture/1a4af718455d4aab528e7a61f86fa25e6a369d1768dcb13f7df319a713eb810b",
-            "variant" : "CLASSIC",
-            "alias" : "STEVE"
-        } 
-         */
-
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
 
@@ -24,7 +14,7 @@ namespace hu.hunluxlauncher.libraries.auth.microsoft.minecraft
         [JsonPropertyName("state")]
         public string State { get; set; }
 
-        [JsonPropertyName("Url")]
+        [JsonPropertyName("url")]
         public Uri Url { get; set; }
 
         /// <summary>

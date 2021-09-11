@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace hu.hunluxlauncher.libraries.auth.microsoft.minecraft
+namespace Libraries.Auth.Microsoft.Minecraft
 {
     internal class AuthenticateRequest
     {
